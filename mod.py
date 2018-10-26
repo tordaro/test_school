@@ -17,7 +17,8 @@ def mean(num_list):
     for num in num_list:
         if type(num) == complex:
             return NotImplemented
-    return sum(num_list)/len(num_list)
+    float_list = [float(num) for num in num_list]  # Necessary in Python 2
+    return sum(float_list)/len(num_list)
 
 
 def fib(n):

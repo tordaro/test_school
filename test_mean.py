@@ -16,7 +16,6 @@ def test_zero():
 
 
 def test_double():
-    # This one will fail in Python 2
     num_list = [1, 2, 3, 4]
     obs = mean(num_list)
     exp = 2.5
@@ -24,7 +23,7 @@ def test_double():
 
 
 def test_long():
-    big = 10000000
+    big = 1000000
     obs = mean(range(1, big))
     exp = big/2.0
     assert obs == exp
